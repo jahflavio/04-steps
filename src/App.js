@@ -8,8 +8,17 @@ const messages = [
   'Invest your new income 🤑',
 ];
 
-// Main App component
 export default function App() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
+
+// Main App component
+function Steps() {
   // State variable to track the current step (starts at 1)
   // Uses useState hook to initialize and manage the step state
   const [step, setStep] = useState(1);
@@ -36,7 +45,7 @@ export default function App() {
 
   // JSX return statement renders the component UI
   return (
-    <>
+    <div>
       {/* Close button that toggles the visibility of the content */}
       {/* Uses functional state update to toggle the isOpen state */}
       {/* Functional update ensures we're working with the most recent state value */}
@@ -86,6 +95,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
